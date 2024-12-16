@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uday Kalyan</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="text-gray-900">
+    <header class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-400">
+        <nav class="flex justify-between items-center px-4 lg:px-16 py-2">
+            <div class="flex items-center transition-transform transform hover:scale-125 duration-500 ease-in-out">
+                <img src="./data/home.png" alt="Home page" class="w-8 h-8 cursor-pointer" onclick="location.href='#'" />
+                <a href="#" class="ml-2 text-xl font-bold text-gray-800 hover:text-grey-200">Uday Kalyan</a>
+            </div>
+            
+            <div class="lg:hidden">
+                <button id="menu-toggle" class="navbar-toggler block text-gray-800 hover:text-blue-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M2 5a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm0 4a1 1 0 100 2h14a1 1 0 100-2H2zm0 6a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="hidden lg:flex lg:items-center lg:space-x-8">
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">About</a></li>
+                    <li><a href="#skills" class="nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">Skills</a></li>
+                    <li><a href="#certs" class="nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">Certifications</a></li>
+                    <li><a href="#projects" class="nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">Projects</a></li>
+                    <li><a href="#contact" class="nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden">
+            <ul class="flex flex-col items-center pt-2">
+                <li><a href="#about" class="block py-2 nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">About</a></li>
+                <li><a href="#skills" class="block py-2 nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">Skills</a></li>
+                <li><a href="#certs" class="block py-2 nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">Certifications</a></li>
+                <li><a href="#projects" class="block py-2 nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">Projects</a></li>
+                <li><a href="#contact" class="block py-2 nav-link hover:text-blue-500 hover:underline transition duration-300 ease-in-out">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+<!-- Home Page Profile section -->
+    <section id="profile" class="flex flex-col items-center p-8 bg-white shadow-md mt-4 dark:bg-gray-400">
+        <div class="section__pic-container mb-4">
+            <img src="./data/profilePhoto.jpeg" alt="Uday Kalyan profile picture" class="rounded-full w-32 h-32 transition-transform transform hover:scale-125 duration-1000 ease-out" />
+        </div>
+        <div class="section__text text-center">
+            <p class="section__text__p1 text-lg text-gray-500">Hello, I'm</p>
+            <h1 class="title text-4xl font-bold mt-2">Uday Kalyan</h1>
+            <p class="section__text__p2 text-lg text-gray-500 mt-2">Full Stack Developer</p>
+            <div class="btn-container flex space-x-4 mt-4">
+                <button class="btn btn-color-2 bg-blue-500 text-white py-2 px-4 rounded hover:scale-x-110 transition-transform duration-300 ease-in-out" onclick="window.open('./data/UdayKalyanResume.pdf')">Download CV</button>
+                <button class="btn btn-color-1 bg-green-500 text-white py-2 px-4 rounded hover:scale-x-110 transition-transform duration-300 ease-in-out" onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+            <div id="socials-container" class="flex space-x-4 mt-4 justify-center">
+                <img src="./data/linkedin.png" alt="My LinkedIn profile" class="icon w-6 h-6 cursor-pointer transition-transform transform hover:scale-150 duration-300 ease-in-out" onclick="location.href='https://linkedin.com/'" />
+                <img src="./data/github.png" alt="My Github profile" class="icon w-6 h-6 cursor-pointer transition-transform transform hover:scale-150 duration-300 ease-in-out" onclick="location.href='https://github.com/'" />
+                <img src="./data/youtube.png" alt="My Youtube profile" class="icon w-6 h-6 cursor-pointer transition-transform transform hover:scale-150 duration-300 ease-in-out" onclick="location.href='https://youtube.com/'" />
+                <img src="./data/facebook.png" alt="My Facebook profile" class="icon w-6 h-6 cursor-pointer transition-transform transform hover:scale-150 duration-300 ease-in-out" onclick="location.href='https://fb.com/'" />
+            </div>
+        </div>
+    </section>
+    
+<!-- AboutMe section -->
+    <section id="about" class="p-8 bg-white shadow-md mt-4 dark:bg-gray-400">
+        <p class="section__text__p1 text-lg text-gray-500 text-center">Get To Know More</p>
+        <h1 class="title text-4xl font-bold text-center mt-2">About Me</h1>
+        <div class="section-container mt-4 flex flex-col lg:flex-row items-center lg:items-start">
+            <div class="section__pic-container mb-4 lg:mb-0 lg:mr-8">
+                <img src="./data/aboutMe_pic.jpg" alt="Profile picture" class="about-pic rounded-md w-32 h-32 transition-transform transform hover:scale-125 duration-1000 ease-out" />
+            </div>
+            <div class="about-details-container flex-1">
+                <div class="about-containers flex justify-around mb-4">
+                    <div class="details-container text-center">
+                        <img src="./data/experience.png" alt="Experience icon" class="icon w-10 h-10 mx-auto" />
+                        <h3 class="font-bold mt-2">Experience</h3>
+                        <p class="mt-1">2+ years <br />Full Stack Development</p>
+                    </div>
+                    <div class="details-container text-center">
+                        <img src="./data/education.png" alt="Education icon" class="icon w-10 h-10 mx-auto" />
+                        <h3 class="font-bold mt-2">Education</h3>
+                        <p class="mt-1">B.Tech. Bachelors Degree<br />M.S. Masters Degree</p>
+                    </div>
+                </div>
+                <div class="text-container mt-4">
+                    <p id="about-text" class="about-text hidden">
+                        Hey there! I'm a passionate software engineer with a keen interest in technology, current affairs, and how they intersect 
+                        with our daily lives. I hold a Master's Degree in Computer Science, where I honed my problem-solving skills and learned 
+                        the importance of teamwork and effective communication. As a lifelong learner, I am committed to staying current with 
+                        industry trends and continuously improving my technical skills. I am eager to bring my passion for development and my 
+                        collaborative spirit to a dynamic team, where I can contribute to meaningful projects and grow professionally. If you 
+                        are looking for a motivated and versatile Full Stack Development Engineer, I would love to connect!
+                    </p>
+                    <button id="read-more-btn" class="hover:text-gray-400 font-bold py-2 px-4 rounded mt-2">
+                        >> Read More
+                    </button>
+                </div>
+            </div>
+        </div>
+        <img src="./data/arrow.png" alt="Arrow icon" class="icon arrow w-10 h-10 mt-4 mx-auto cursor-pointer" onclick="location.href='./#skills'" />
+    </section>
+    
+<!-- Skills section -->
+    <section id="skills" class="p-8 bg-white shadow-md mt-4 dark:bg-gray-400">
+        <p class="text-lg text-gray-600 text-center italic">Explore My</p>
+        <h1 class="text-5xl font-extrabold text-center mt-2 text-blue-800">Skills</h1>
+        <div class="experience-details-container mt-4 flex flex-col lg:flex-row items-center lg:items-start">
+            <div class="about-containers flex-1">
+                <div class="details-container text-center mb-4">
+                    <h2 class="experience-sub-title text-2xl font-bold mb-2">Frontend Development</h2>
+                    <div class="flex justify-center"> 
+                        <div class="article-container space-y-4 w-full md:w-2/3 lg:w-1/2 bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                            <article class="transition-transform transform hover:scale-105 duration-300 ease-in-out hover:bg-blue-50 p-4 rounded-xl">
+                                <h3 class="font-bold">HTML</h3>
+                                <div class="relative pt-1">
+                                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+                                        <div style="width:100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <article class="transition-transform transform hover:scale-105 duration-300 ease-in-out hover:bg-blue-50 p-4 rounded-xl">
+                                <h3 class="font-bold">CSS</h3>
+                            <div class="relative pt-1">
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+                                    <div style="width:100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="transition-transform transform hover:scale-105 duration-300 ease-in-out hover:bg-blue-50 p-4 rounded-xl">
+                            <h3 class="font-bold">JavaScript</h3>
+                            <div class="relative pt-1">
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+                                    <div style="width:20%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="transition-transform transform hover:scale-105 duration-300 ease-in-out hover:bg-blue-50 p-4 rounded-xl">
+                            <h3 class="font-bold">TypeScript</h3>
+                            <div class="relative pt-1">
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+                                    <div style="width:20%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="transition-transform transform hover:scale-105 duration-300 ease-in-out hover:bg-blue-50 p-4 rounded-xl">
+                            <h3 class="font-bold">React</h3>
+                            <div class="relative pt-1">
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+                                    <div style="width:60%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <img src="./data/arrow.png" alt="Arrow icon" class="icon arrow w-10 h-10 mt-4 mx-auto cursor-pointer" onclick="location.href='./#certs'" />
+    </section>
+    
+<!-- Certifications section -->
+    <section id="certs" class="p-8 bg-gray-50 shadow-lg mt-4 rounded-xl dark:bg-gray-400">
+        <p class="text-lg text-gray-600 text-center italic">View my</p>
+        <h1 class="text-5xl font-extrabold text-center mt-2 text-blue-800">Certifications</h1>
+        <div class="certification-container mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="certification-card bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                <h2 class="text-2xl font-bold mb-2">Programming with JavaScript</h2>
+                <p class="text-gray-600"><strong>Issuing Company:</strong> Meta</p>
+                <p class="text-gray-600 break-all"><strong>Credential ID:</strong> DN6C7BULWF9D</p>
+                <a href="https://www.coursera.org/account/accomplishments/records/DN6C7BULWF9D" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 hover:scale-x-110">View Credential</a>
+            </div>
+            <div class="certification-card bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                <h2 class="text-2xl font-bold mb-2">AWS Cloud Technical essentials</h2>
+                <p class="text-gray-600"><strong>Issuing Company:</strong> Coursera</p>
+                <p class="text-gray-600 break-all"><strong>Credential ID:</strong> XCYMP9VSDSQY</p>
+                <a href="https://coursera.org/share/8c038df0574ccfd1f3b6ad9083c5796b" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 hover:scale-x-110">View Credential</a>
+            </div>
+            <div class="certification-card bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                <h2 class="text-2xl font-bold mb-2">Programming Foundations: Algorithms</h2>
+                <p class="text-gray-600"><strong>Issuing Company:</strong> Linkedin</p>
+                <p class="text-gray-600 break-all"><strong>Credential ID:</strong> 9a33c8bfb1b89be33e15ee8e96828f98e6e1af73f34d3320636e9e4b9ce94278</p>
+                <a href="https://www.linkedin.com/learning/certificates/9a33c8bfb1b89be33e15ee8e96828f98e6e1af73f34d3320636e9e4b9ce94278?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bm4f09ATGT1iH6%2F1QmWzr6Q%3D%3D" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 hover:scale-x-110">View Credential</a>
+            </div>
+            <div class="certification-card bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                <h2 class="text-2xl font-bold mb-2">Technical Support fundamentals</h2>
+                <p class="text-gray-600"><strong>Issuing Company:</strong> Google</p>
+                <p class="text-gray-600 break-all"><strong>Credential ID:</strong> MM89CB9XYVU4</p>
+                <a href="https://www.coursera.org/account/accomplishments/certificate/MM89CB9XYVU4" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 hover:scale-x-110">View Credential</a>
+            </div>
+        </div>
+        <img src="./data/arrow.png" alt="Arrow icon" class="icon arrow w-10 h-10 mt-4 mx-auto cursor-pointer" onclick="location.href='./#projects'" />
+    </section>
+    
+<!-- Projects section -->
+    <section id="projects" class="p-8 bg-white shadow-md mt-4 dark:bg-gray-400">
+        <p class="section__text__p1 text-lg text-gray-500 text-center">Browse My Recent</p>
+        <h1 class="title text-4xl font-bold text-center mt-2">Projects</h1>
+        <div class="experience-details-container mt-4 grid gap-8 lg:grid-cols-3">
+            <!-- first row -->
+            <div class="details-container color-container border border-gray-300 rounded-lg overflow-hidden">
+                <div class="article-container relative overflow-hidden group">
+                    <img src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 1" class="project-img transform transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h2 class="experience-sub-title project-title text-center mt-4 mb-2 font-serif">Project One</h2>
+                <div class="btn-container flex justify-center space-x-4">
+                    <button class="btn btn-color-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-x-150" onclick="location.href='https://github.com/'">Github</button>
+                </div>
+            </div>
+            <div class="details-container color-container border border-gray-300 rounded-lg overflow-hidden">
+                <div class="article-container relative overflow-hidden group">
+                    <img src="https://images.pexels.com/photos/15352967/pexels-photo-15352967/free-photo-of-a-lamp-with-circles-on-it-is-sitting-on-a-bed.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 2" class="project-img transform transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h2 class="experience-sub-title project-title text-center mt-4 mb-2 font-serif">Project Two</h2>
+                <div class="btn-container flex justify-center space-x-4">
+                    <button class="btn btn-color-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-x-150" onclick="location.href='https://github.com/'">Github</button>
+                </div>
+            </div>
+            <div class="details-container color-container border border-gray-300 rounded-lg overflow-hidden">
+                <div class="article-container relative overflow-hidden group">
+                 <img src="https://images.pexels.com/photos/12801806/pexels-photo-12801806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 3" class="project-img transform transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h2 class="experience-sub-title project-title text-center mt-4 mb-2 font-serif">Project Three</h2>
+                <div class="btn-container flex justify-center space-x-4">
+                    <button class="btn btn-color-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-x-150" onclick="location.href='https://github.com/'">Github</button>
+                </div>
+            </div>
+            <!-- second row -->
+            <div class="details-container color-container border border-gray-300 rounded-lg overflow-hidden">
+                <div class="article-container relative overflow-hidden group">
+                    <img src="https://images.pexels.com/photos/10060431/pexels-photo-10060431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 1" class="project-img transform transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h2 class="experience-sub-title project-title text-center mt-4 mb-2 font-serif">Project Four</h2>
+                <div class="btn-container flex justify-center space-x-4">
+                    <button class="btn btn-color-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-x-150" onclick="location.href='https://github.com/'">Github</button>
+                </div>
+            </div>
+            <div class="details-container color-container border border-gray-300 rounded-lg overflow-hidden">
+                <div class="article-container relative overflow-hidden group">
+                    <img src="https://images.pexels.com/photos/18277105/pexels-photo-18277105/free-photo-of-landscape-of-mountains.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 2" class="project-img transform transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h2 class="experience-sub-title project-title text-center mt-4 mb-2 font-serif">Project Five</h2>
+                <div class="btn-container flex justify-center space-x-4">
+                    <button class="btn btn-color-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-x-150" onclick="location.href='https://github.com/'">Github</button>
+                </div>
+            </div>
+            <div class="details-container color-container border border-gray-300 rounded-lg overflow-hidden">
+                <div class="article-container relative overflow-hidden group">
+                    <img src="https://images.pexels.com/photos/8332112/pexels-photo-8332112.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project 3" class="project-img transform transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h2 class="experience-sub-title project-title text-center mt-4 mb-2 font-serif">Project Six</h2>
+                <div class="btn-container flex justify-center space-x-4">
+                    <button class="btn btn-color-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-x-150" onclick="location.href='https://github.com/'">Github</button>
+                </div>
+            </div>
+        </div>
+        <img src="./data/arrow.png" alt="Arrow icon" class="icon arrow w-10 h-10 mt-4 mx-auto cursor-pointer" onclick="location.href='./#contact'" />
+    </section>
+    
+
+<!-- contact me section  -->
+<section id="contact" class="p-8 bg-gray-50 shadow-lg mt-4 rounded-xl dark:bg-gray-400">
+    <p class="text-lg text-gray-600 text-center italic">Stay Connected</p>
+    <h1 class="text-5xl font-extrabold text-center mt-2 text-blue-800">Contact Us</h1>
+    <div class="mt-10 flex flex-col md:flex-row items-center md:space-x-10 space-y-10 md:space-y-0">
+        <div class="w-full md:w-2/3 lg:w-1/2 bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 duration-300 ease-in-out h-full">
+            <div class="text-center mb-6 h-full flex flex-col justify-center">
+                <div class="contact-info space-y-5 bg-white p-8 rounded-xl shadow-md h-full">
+                    <p><span class="font-semibold">Email:</span> <a href="mailto:udaykalyan975@gmail.com" class="text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out">udaykalyan975@gmail.com</a></p>
+                    <p><span class="font-semibold">Phone:</span> +91 7097143685</p>
+                    <p><span class="font-semibold">Address:</span> Hyderabad, IN</p>
+                    <p><span class="font-semibold">ZipCode:</span> 501505</p>
+                </div>
+            </div>
+        </div>
+        <form class="w-full md:w-2/3 lg:w-1/2 bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 duration-300 ease-in-out h-full" method="POST" action="#profile">
+            <div class="mb-6">
+                <label for="name" class="block text-gray-800 font-semibold mb-2">Name:</label>
+                <input type="text" id="name" name="name" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out" required>
+            </div>
+            <div class="mb-6">
+                <label for="email" class="block text-gray-800 font-semibold mb-2">Email:</label>
+                <input type="email" id="email" name="email" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out" required>
+            </div>
+            <div class="mb-6">
+                <label for="message" class="block text-gray-800 font-semibold mb-2">Message:</label>
+                <textarea id="message" name="message" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out" rows="5" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="bg-blue-600 text-white py-3 px-8 rounded-xl shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer section -->
+<footer class="bg-gray-800 text-white py-6 flex-col dark:bg-gray-400">
+    <nav class="container mx-auto text-center">
+        <div class="nav-links-container mb-4">
+            <ul class="nav-links flex justify-center space-x-4">
+                <li><a href="#about" class="hover:text-gray-400 transition duration-300 ease-in-out">About</a></li>
+                <li><a href="#skills" class="hover:text-gray-400 transition duration-300 ease-in-out">Skills</a></li>
+                <li><a href="#certs" class="hover:text-gray-400 transition duration-300 ease-in-out">Certifications</a></li>
+                <li><a href="#projects" class="hover:text-gray-400 transition duration-300 ease-in-out">Projects</a></li>
+                <li><a href="#contact" class="hover:text-gray-400 transition duration-300 ease-in-out">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="button-container flex justify-center space-x-4 mt-4">
+        <a href="tel:+917097143685" class="flex bg-green-600 px-4 py-2 rounded-lg text-center hover:scale-x-125 transition-transform duration-300 ease-in-out">Call</a>
+        <a href="mailto:udaykalyan975@gmail.com" class="flex bg-green-600 px-4 py-2 rounded-lg text-center hover:scale-x-125 transition-transform duration-300 ease-in-out">Email</a>
+    </div>
+    <p class="text-center text-gray-500 mt-4">Copyright &#169; 2024 Uday Kalyan. All Rights Reserved.</p>
+</footer>
+
+<!-- AboutMe section read more button script -->
+<script>
+    const readMoreBtn = document.getElementById('read-more-btn');
+    const aboutText = document.getElementById('about-text');
+
+    readMoreBtn.addEventListener('click', function() {
+        aboutText.classList.toggle('hidden');
+        if (aboutText.classList.contains('hidden')) {
+            readMoreBtn.textContent = 'Read More';
+        } else {
+            readMoreBtn.textContent = '<< Read Less';
+        }
+    });
+</script>
+
+<!-- Mobile menu script -->
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
+
+
+</body>
+</html>
